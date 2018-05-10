@@ -1,0 +1,52 @@
+
+<html>
+<head>	
+	<title>P2P income comparison</title>
+</head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<style type="text/css">
+input{
+	border: none;
+}
+</style>
+<body>
+	<form style="width: 850px;margin: 10px auto;position: relative;">
+		<button style="position: absolute;left: 850px;top: 0;"  id="add">+</button>
+		<table style="border-spacing: inherit;" border="1">
+			<tbody>
+			<tr>
+				<th>invest($)</th><th>date(m)</th><th>rate(%)</th><th>used ticket($)</th><th>total income($)</th><th>income($/m*10000)</th>
+			</tr>
+			<tr>
+				<td><input ></td> <td><input ></td> <td><input ></td> <td><input ></td><td>Nav</td><td>Nav</td>
+			</tr>
+			</tbody>
+		</table>
+		<button id="submits" style="position: absolute;left: 850px;bottom: 0;">submit</button>
+	</form>
+	
+</body>
+<script type="text/javascript">
+	$(function(){
+		$('#submits').click(function(){
+			$("table tr:not('tr:first')").each(function(){
+				invest = $(this).find('input').eq(0).val();
+				dates  = $(this).find('input').eq(1).val();
+				rates  = $(this).find('input').eq(2).val();
+				discount  = $(this).find('input').eq(3).val();
+				total_income = invest*1*rates/1200*dates+discount*1;
+				state = total_income*1/(invest*1-discount*1)*10000/dates;
+				total_income = Math.round(total_income*100)/100;
+				state = Math.round(state*100)/100;
+				$(this).find('td').eq(4).text(total_income);
+				$(this).find('td').eq(5).text(state);
+			});
+			return false;
+		})
+		$('#add').click(function(){
+			$('table tbody').append('<tr><td><input ></td> <td><input ></td> <td><input ></td> <td><input ></td><td>Nav</td><td>Nav</td></tr>');
+			return false;
+		})
+	})
+</script>
+</html>
