@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>title</title>
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<script type="text/javascript" src="./js/adapt.js"></script>
+	<script type="text/javascript" src="./js/jquery-2.2.0.min.js"></script>
+</head>
+<style type="text/css">
+	.content div{
+		 
+	}
+	.content .base-point{
+		position: relative;
+display: inline-block;
+background-color: rgba(255,255,0,0.5);
+	}
+	.f-top{
+		position: absolute;
+top: 0rem;
+left: 0;
+display: none;
+width: 100%;
+text-align: center;
+z-index: 99;
+color: #666;
+
+	}
+</style>
+<body>
+	<div class="page">
+		 <div class="header"> 
+		 </div>
+		 <div class="content">
+		 		<div>
+					FX.php is a PHP class that interacts with FileMaker data using the XML output by Server or Server Advanced (for FileMaker 7+) or the Web Companion (for FileMaker 5/6). From there, you can use PHP's diverse and powerful functions alongside FX.php to <span class="base-point">manipulate <span class="f-top">error</span></span>your data, publish it on the internet, run scripts in FileMaker, and so on. FX is free and open-source. Below are some FX.php related links. I'll put more relevant links here as they're available. You might also want to check out my FX Links page and FX Sites Page. If you have any questions, comments, etc. feel free to email me at fxphp<at>iviking.org.
+				</div>
+		 </div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){  
+		　$(".base-point").mouseover(function(){ 
+				$(".f-top").show();
+				$(".f-top").stop().animate({display:'inline-block',top:'-0.9rem'},800);
+			}); 
+			$(".base-point").mouseout(function(){ 
+				$(".f-top").stop().animate({top:'0',display:'none'},800,function(){
+					$(".f-top").hide();
+				});
+				
+			}); 
+	})
+</script>
+</html>

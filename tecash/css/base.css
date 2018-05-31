@@ -1,0 +1,47 @@
+
+    body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,code,em,img,q,small,strong,dd,dl,dt,li,ol,ul,fieldset,form,label,table,tbody,tr,th,td,input{margin:0;padding:0;border:0}
+    a,a:active,a:hover,a:focus,a:visited{text-decoration:none}
+    a,img{-webkit-touch-callout:none;max-width: 100%}
+    ol,ul,li{list-style:none} 
+    button{border: none;}
+    body{background-color: #f0f0f0;}
+    .page{}
+    .header{
+    	background-color:#35b2aa; 
+    	height:20rem;
+    	position: relative;
+    }
+    .head-img{
+    	width:5.5rem;
+    	height:5.7rem;
+    	background: url(../images/1_03.png);
+    	background-position: center 0;
+background-size: cover;
+		position: absolute;
+		left: 50%;
+		top: 28%;
+		transform: translateX(-2.75rem);
+    }
+    .head-text{
+    	text-align: center;
+width: 100%;
+position: absolute;
+top: 82%;
+font-size: 1.35rem;
+color: #eee;
+    }
+    .content{
+    	font-size: 1.25rem;
+    	padding: 2rem;
+    	color: #a6a6a6
+    }
+    table{
+    	width: 100%;
+    }
+    .button-default{
+    	border: none;
+background-color: #35b2aa;
+color: #eee;
+padding: 2.5rem 9.5rem;
+box-shadow: 1px 1px 5px #bbb;
+    }
