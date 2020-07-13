@@ -93,10 +93,10 @@ justify-content: center;
 align-items: center;
 font-weight: 300;
 font-size: 14px;
-animation:mymoves31 5s ease-in-out 0s infinite alternate forwards;
+animation:mymoves31 5s ease-in-out 0s 1 alternate forwards;
 position: absolute;left:-10%;top: 10%;
 } 
-.animals31{animation:mymoves31 5s ease-in-out 0s infinite alternate forwards;}
+.animals31{animation:mymoves31 5s ease-in-out 0s 1 alternate forwards;}
 @keyframes mymoves31{
         0%{position: absolute;left:-10%;top: 10%;}
        100%{position: absolute;left: 47%;top: 10%;}
@@ -113,7 +113,7 @@ position: absolute;left:-10%;top: 10%;
     font-weight: 300;
     font-size: 14px;
     position: absolute;left:5%;top: 15%;
-    animation:mymoves32 5s ease-in-out 0s infinite alternate forwards;
+    animation:mymoves32 5s ease-in-out 0s 1 alternate forwards;
 } 
 .animals32{animation:mymoves32 5s ease-in-out 0s infinite alternate forwards;}
 @keyframes mymoves32{
@@ -121,17 +121,18 @@ position: absolute;left:-10%;top: 10%;
        100%{position: absolute;top: 41%;left: 30%;}
 }
 #page4 img{position: absolute;height: auto;}
-.animals42{animation:mymoves42 9s ease-in-out 0s infinite alternate forwards;}
+.animals41{animation:mymoves42 10s ease-in-out 0s 1 alternate forwards;}
 @keyframes mymoves42{
-        0%{opacity: 1;}
-        50%{opacity: 0;}
+        0%{opacity: 0;}
+        30%{opacity: 0;}
+        60%{opacity: 0.3;}
        100%{opacity:1;}
 }
-.animals41{animation:mymoves41 9s ease-in-out 0s infinite alternate forwards;}
+.animals42{animation:mymoves41 5s ease-in-out 0s 1 alternate forwards;}
 @keyframes mymoves41{
         0%{opacity:0;}
-        50%{opacity: 1;}
-       100%{opacity:0;}
+        30%{opacity:0.7;}
+       100%{opacity:1;}
 }
 .animals43{animation:mymoves43 1s ease-in-out 0s infinite alternate forwards;}
 @keyframes mymoves43{
@@ -139,6 +140,11 @@ position: absolute;left:-10%;top: 10%;
         25%{right:9%;} 
         26%{right:10%;} 
        60%{right:9%;}
+}
+.animalhide{animation:mymoveshide 3s ease-in-out 0s 1 alternate forwards;}
+@keyframes mymoveshide{
+        0%{opacity: 1;} 
+        100%{opacity:0;} 
 }
 </style>
 <body>
@@ -298,7 +304,7 @@ position: absolute;left:-10%;top: 10%;
             }
         },t+3000) 
         setTimeout(function () {
-            page2.style.opacity="0.5";
+            page2.setAttribute('class','animalhide');
         },t+4600)
         setTimeout(function () {
             page2.style.display="none";
@@ -309,15 +315,12 @@ position: absolute;left:-10%;top: 10%;
         //第三场 
         t=t+6600;
         setTimeout(function(){
-            page3.style.opacity="0.5";
-        },t+10000) 
-        setTimeout(function(){
-            page3.style.opacity="0.2";
-        },t+11000) 
+            page3.setAttribute('class','animalhide');
+        },t+6000)  
         setTimeout(function(){
             page3.remove();
             page4.style.display="block";
-        },t+12000)
+        },t+9000)
          //第四场  
          
     }
